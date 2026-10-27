@@ -24,19 +24,22 @@
     }
 
     .church-brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      text-align: center;
-    }
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    text-align: center;
+}
 
-    .church-brand img {
-      width: 75px;
-      height: 75px;
-      object-fit: contain;
-    }
+.church-brand img {
+    width: 110px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 
     .brand {
       color: #f3c969;
@@ -67,13 +70,18 @@
 }
 
 
-    .tagline {
-      margin-top: 6px;
-      font-size: 14px;
-    }
+    
+.tagline {
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #F1C75B;
+  letter-spacing: 0.4px;
+}
+
 
     nav {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px 22px;
@@ -92,22 +100,27 @@
 
     .hero {
       padding: 75px 7%;
-      background: linear-gradient(120deg, #082d62, #14569a);
-      color: white;
+    background: #ffffff;
+        color: #12345a;
     }
 
     .hero h1 {
       max-width: 800px;
       font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
       line-height: 1.2;
-      text-align: left;
+      text-align: center;
       margin: 0 0 20px;
+    color: #12345a;
+letter-spacing: 1px;
+text-transform: uppercase;
     }
 
     .hero p {
       max-width: 650px;
       line-height: 1.8;
-      color: #e3ebf8;
+      font-size: 18px;
+      color: #333333;
     }
 
     .button {
@@ -218,7 +231,7 @@ nav a:hover {
 .hero {
   padding: 85px 7%;
   text-align: center;
-  background: linear-gradient(135deg, #082d62, #1456a0);
+ background: #ffffff;
   color: white;
 }
 
@@ -298,10 +311,13 @@ section h2 {
 }
 
 .menu-toggle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+position: absolute;
+top: 20px;
+right: 25px;
+left: auto;
+transform: none;
+
   width: 54px;
   height: 50px;
   background: #252525;
@@ -318,13 +334,49 @@ section h2 {
   }
 }
 
+ 
+/* Navigation menu button */
+.menu-toggle {
+  display: block;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: auto;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+
+@media (min-width: 601px) {
+  nav.open {
+    display: flex;
+  }
+}
+
   </style>
 </head>
 
 <body>
   <header>
     <div class="church-brand">
-    <img src="./image/logo.png" alt="The church of Pentecost logo" style="width: 100px; object-fit: contain;">
+    <img src="./image/logo.png" alt="The church of Pentecost logo" style="width: 120px; object-fit: contain;">
 
       <div>
         
@@ -339,6 +391,9 @@ section h2 {
         </div>
       </div>
     </div>
+    
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
 
     <nav>
       <a href="#home">Home</a>
@@ -376,73 +431,99 @@ section h2 {
 
   <main>
     <section class="hero" id="home">
-      <h1>A Bible-Believing, Holy Spirit-Filled and Mission-Oriented Church</h1>
+      
+      <h1>Bible-Believing. Spirit-led. Unleashed to Transform.</h1>
       <p>
-        Welcome to The Church of Pentecost International Rwanda.
-        We are committed to transforming lives through the Scriptures
-        and the power of the Holy Spirit, sharing the Gospel of Jesus Christ
-        and making disciples of all nations.
+        Welcome to The Church of Pentecost International, Rwanda.
+        We are a Spirit-filled community committed to making disciples, transforming lives through the Scriptures, and equipping believers for global impact.
       </p>
       <a class="button" href="#about">Discover Our Church</a>
     </section>
 
     <section class="section" id="about">
-      <h2>About Our Church</h2>
+      <h2>ABOUT OUR CHURCH</h2>
       <p>
-        We proclaim the Gospel of Jesus Christ, make disciples,
-        strengthen families and serve communities throughout Rwanda.
+      The church of pentecost International ,Rwanda is indeed a direct branch of the a major Pentecostal Christian denomination which is an international Church with Headquarters in Accra Ghana
+      HISTORY AND ORGIN WORLDWIDE.: [
+
+      .Founding : Started in 1937 throught the missionary work of Irish pastor James McKeown under British Apostolic Church in GoldCoast(Ghana).
+      Name Changes: Founded as the Gold Coast Apostolic Church in 1957,rensmed the Ghana Apostolic Church in 1957 after independence,and formally
+      addopted its current name in August 1962].
+      .HISTORY OF THE CHURCH OF PENTECOST IN RWANDA:
+
+      [on 12 August 2000, A Ghanaian  Pastor Samuel Yaw Antwi who was a missionary and National Head of the Church in Zimbabwe visited Rwanda together with brother Kalambi Foustin a congolese who was staying in burundi
+       and they welcomed by Brother Jean marie and other six people whom were home cell group members they were  brother Khakonge Moise,Brother Marcelin Rachid,Brother Kabiona Daniel,brother Gihimbare Janvier,brother 
+       Nkundabagenzi Justin and Inamahoro francine. then Kalambi Faustin introduced Jean marie Wedundu to Ps Samuel Yaw Antwi as a possible leader for new Church to be Started.They were thirty-six members in the cell group.]  
+
       </p>
     </section>
 
     <section class="section" id="leadership">
-      <h2>National Leadership</h2>
+      <h2>NATIONAL LEADERSHIP</h2>
       <p>
-        Official leadership profiles and information will be published
-        here after confirmation by the church.
+      The National leadership of The Church of Pentecost International, Rwanda has transitioned to its newest leadership Team:
+      <CURRENT NATIONAL HEAD> Pastor Desire Twizere  he was officially appointed During 48th General council Meeting (Ghana) to lead  and become Legal representative of the church in rwanda he is a Missionary Tranfered from Uganda he is Married to Mrs Ingabire Marie Chantal
+        <NATIONAL EXECUTIVE COMMITEE> The National Head work alongside the national executive committe  to admister day to day the church in Rwanda notable committe member has Pastors and Elders of the Church.here are national executive committe:
+          Pastor Jean Bosco Murindangabo Vice legal representative and Kigali District Pastor, Overseer Byamungu Marcelin National Secretary and Gisenyi District Overseer, Probation Overseer Ntaganda Emmanuel : National Deacon,Pastor Twagiramungu Felecien member and Nyamirembe District Pastor,
+           Pastor Habiyakare Celestin member and Byumba District Pastor,Pastor Bahufite Emmanuel member and Marimba District Pastor,Elder Reberaho Francois , Elder Iradukunda Jean D'Amour and Nyinawumuntu Monique National Women Leader who is Co-opted in national executive committe 
+           <NATIONAL MINISTRIES LEADERS.
       </p>
     </section>
 
     <section class="section" id="structure">
-      <h2>Church Structure</h2>
+      <h2>CHURCH STRUCTURES</h2>
       <p>
-        Explore The Church of Pentecost International Rwanda,
-        from the national level to local assemblies.
+       In The church of Pentecost International ,Rwanda the Structure move Direct from Global HeadQuarters Accra(Ghana) to NATIONAL COUNSIL as the highest internal decision-making body within the country.
+       while National Executiveis resiponsible for the day-to-day administration of the church.
       </p>
       <div class="cards">
         <div class="card">
-          <h3>Areas</h3>
-          <p>Find church Areas across Rwanda.</p>
+          <h3>AREAS</h3>
+          <p>The Church Has Five Administrative Areas : KIGALI AREA has 5 District[kigali,Gisenyi,Nyamirembe,Huye,Karongi] 
+            ,KABARORE AREA has 4 Districts[Kanarore,Marimba,RWisheke,Rwempasha],KAYONZA AREA has 4 <District Kinyegenyege,Karangazi,Kayonza,Gahini.
+            ,NGARAMA AREA has 4 Districts [Ngarama,Mimuri,Kageyo,Karubungo]and NORTH AREA has 3 District[Byumba,Burera,Kagamba] .
         </div>
         <div class="card">
-          <h3>Districts</h3>
+          <h3>DISTRICTS</h3>
           <p>Explore Districts within each Area.</p>
         </div>
         <div class="card">
-          <h3>Local Assemblies</h3>
+          <h3>LOCAL ASSEMBLIES</h3>
           <p>Find local churches and their locations.</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="ministries">
-      <h2>Our Ministries</h2>
+      <h2>OUR MINISTRIES</h2>
       <div class="cards">
         <div class="card">
-          <h3>Worship &amp; Prayer</h3>
-          <p>Growing together in worship, prayer and the Word of God.</p>
+      <h3>PEMEM (PENTECOST MEN MINISTRY</h3>
+          <p>Man the Image and Glory of God.</p>
         </div>
         <div class="card">
-          <h3>Evangelism</h3>
+          <h3>EVANGELISM MINISTRY</h3>
           <p>Sharing the Gospel and reaching communities with Christ's love.</p>
         </div>
         <div class="card">
-          <h3>Youth &amp; Children</h3>
-          <p>Equipping the next generation to live for Jesus Christ.</p>
+          <h3>YOUTH MINISTRY</h3> 
+          <p>Youth Arise and Shine ,Youth remember your Creater now</p>
         </div>
         <div class="card">
-          <h3>Community Service</h3>
+    <h3>CHILDREN MINISTRY</h3>
+    <p>Equipping the next generation to live for Jesus Christ.</p>
+</div>
+        <div class="card">
+          <h3>WOMEN MINISTRYS</h3>
           <p>Serving people and demonstrating God's love in practical ways.</p>
+         
+          <h3></h3>
         </div>
+        <div class="card">
+    <h3>PENSA INTERNATIONAL</h3>
+    <p>Pentecost Students and Associates.</p>
+    <p>Pensa International: Into the world we go — Campus Ministry.</p>
+</div>
       </div>
     </section>
 
